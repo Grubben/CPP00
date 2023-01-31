@@ -1,21 +1,23 @@
 NAME		= phonebook
 
 ## COMPILATION
-CXX			= c++
+# CXX			= c++
+CC			= c++
 # Compilation Flags
-CXXFLAGS	=-Wall -Wextra -Werror -g -std=c++98
+# CXXFLAGS	=-Wall -Wextra -Werror -g -std=c++98
+CFLAGS		=-Wall -Wextra -Werror -g -std=c++98
 
 # Removal Flags. Not sure if necessary
 RM			= rm -rf
 
-SRCS		= megaphone.cpp
+SRCS		= Contact.cpp PhoneBook.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
 $(NAME)		: $(OBJS)
 			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
-%.o			: %.c
+%.o			: %.cpp
 			$(CC) $(CFLAGS) -c -o $@ $<
 
 all			: $(NAME)
