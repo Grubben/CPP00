@@ -6,15 +6,19 @@
 /*   By: endarc <endarc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:29:14 by amaria-d          #+#    #+#             */
-/*   Updated: 2023/02/07 11:57:21 by endarc           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:01:20 by endarc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <iostream>
 
 Contact::Contact( void ) {
     std::cout << "Contact constructor called" << std::endl;
+	firstn = "";
+	lastn = "";
+	nickn = "";
+	pnum = "";
+	secret = "";
 }
 
 Contact::~Contact( void ) {
@@ -47,12 +51,11 @@ void	Contact::create(void)
 	this->secret = getin("Darkest Secret> ");	
 }
 
-/*
 int main(void)
 {
     Contact hello;
     
 	hello.create();
+	hello.create();
     return 0;
 }
-*/
