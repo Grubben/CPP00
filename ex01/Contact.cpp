@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-d <amaria-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: endarc <endarc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:29:14 by amaria-d          #+#    #+#             */
-/*   Updated: 2023/01/31 18:09:37 by amaria-d         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:57:21 by endarc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ static std::string	getin(const std::string& prompt)
 
 	do {
 		std::cout << prompt;
-		std::cin >> input;
+		std::getline(std::cin, input);
 		if (! std::cin)
 		{
-			std::cin.clear();
 			input = "";	
 		}
 		std::cout << input << std::endl;
@@ -39,34 +38,21 @@ static std::string	getin(const std::string& prompt)
 	return input;
 }
 
-void	Contact::AddContact(void)
+void	Contact::create(void)
 {
 	this->firstn = getin("First name> ");
 	this->lastn = getin("Last name> ");
 	this->nickn = getin("Nickname> ");
 	this->pnum = getin("Phone Number> ");
-	this->secret = getin("Darkest Secret> ");
-	
-	
-
-	// while (true)
-	// {
-	// 	std::cin >> input;
-	// 	// if (! std::cin)
-	// 	// 	std::cin.clear();
-	// 	std::cout << input << std::endl;
-	// 	// else if (input == "ADD")
-	// 	// 	std::cout << "hellO!" << std::endl;
-	// 	// else
-	// 	// 	break;
-	// }
-	
+	this->secret = getin("Darkest Secret> ");	
 }
 
+/*
 int main(void)
 {
     Contact hello;
     
-	hello.AddContact();
+	hello.create();
     return 0;
 }
+*/

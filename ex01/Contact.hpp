@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaria-d <amaria-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: endarc <endarc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:26:01 by amaria-d          #+#    #+#             */
-/*   Updated: 2023/01/31 18:01:04 by amaria-d         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:34:49 by endarc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ private:
 public:
 	Contact(void);
 	~Contact(void);
-	void	AddContact(void);
+	void	create(void);
 
 };
 
