@@ -5,7 +5,7 @@ NAME		= phonebook
 CC			= c++
 # Compilation Flags
 # CXXFLAGS	=-Wall -Wextra -Werror -g -std=c++98
-CFLAGS		=-Wall -Wextra -Werror -I. -g3 -std=c++98
+CFLAGS		=-I. -g3 -std=c++98 #-Wall -Wextra -Werror
 
 # Removal Flags. Not sure if necessary
 RM			= rm -rf
@@ -20,7 +20,7 @@ $(NAME)		: $(OBJS)
 			# ./$(NAME)
 
 %.o			: %.cpp
-				clear
+				# clear
 				$(CC) $(CFLAGS) -c -o $@ $<
 
 all			: $(NAME)
@@ -34,6 +34,6 @@ fclean		: clean
 f			: fclean
 
 
-re			: fclean $(NAME)
+r			: fclean $(NAME)
 
-.PHONY		: re fclean clean all
+.PHONY		: r fclean clean all
