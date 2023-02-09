@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: endarc <endarc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: amc <amc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:26:01 by amaria-d          #+#    #+#             */
-/*   Updated: 2023/02/07 12:31:27 by endarc           ###   ########.fr       */
+/*   Updated: 2023/02/09 15:24:40 by amc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,19 @@
 
 class Contact
 {
-// private:
 public:
 	std::string firstn;
 	std::string lastn;
 	std::string	nickn;
 	std::string pnum;
-	std::string secret;
 
 	Contact(void);
 	~Contact(void);
 	void	create(void);
+	void	show();
 
+private:
+	std::string secret;
 };
 
 #endif

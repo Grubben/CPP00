@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: endarc <endarc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: amc <amc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:43:47 by amaria-d          #+#    #+#             */
-/*   Updated: 2023/02/07 13:57:21 by endarc           ###   ########.fr       */
+/*   Updated: 2023/02/09 15:29:10 by amc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,23 @@ static void	showfmt(std::string nm)
 		std::cout << std::setw(10) << nm << "|";
 }
 
+static std::string	getin(const std::string prompt)
+{
+	std::string	input = "";
+
+	do {
+		std::cout << prompt;
+		std::getline(std::cin, input);
+		if (! std::cin)
+		{
+			input = "";	
+		}
+		std::cout << input << std::endl;
+	}
+	while (input == "");
+	return input;
+}
+
 void	PhoneBook::show(void)
 {
 	for (int i = 0; i < 9; i++)
@@ -54,4 +71,5 @@ void	PhoneBook::show(void)
 		showfmt(storage[i].nickn);
 		std::cout << std::endl;
 	}
+	storage[std::atoi(getin("Index of Entry to Display> ").c_str())].show();
 }

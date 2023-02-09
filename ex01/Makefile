@@ -20,7 +20,8 @@ $(NAME)		: $(OBJS)
 			# ./$(NAME)
 
 %.o			: %.cpp
-			clear && $(CC) $(CFLAGS) -c -o $@ $<
+				clear
+				$(CC) $(CFLAGS) -c -o $@ $<
 
 all			: $(NAME)
 

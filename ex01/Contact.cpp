@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: endarc <endarc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: amc <amc@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 15:29:14 by amaria-d          #+#    #+#             */
-/*   Updated: 2023/02/07 14:01:20 by endarc           ###   ########.fr       */
+/*   Updated: 2023/02/09 15:26:23 by amc              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ Contact::~Contact( void ) {
     std::cout << "Contact destructor called" << std::endl;
 }
 
-static std::string	getin(const std::string& prompt)
+static std::string	getin(const std::string prompt)
 {
-	std::string	input;
+	std::string	input = "";
 
 	do {
 		std::cout << prompt;
@@ -51,11 +51,22 @@ void	Contact::create(void)
 	this->secret = getin("Darkest Secret> ");	
 }
 
-int main(void)
+void	Contact::show(void)
 {
-    Contact hello;
-    
-	hello.create();
-	hello.create();
-    return 0;
+	std::cout << firstn << std::endl;
+	std::cout << lastn << std::endl;
+	std::cout << nickn << std::endl;
+	std::cout << pnum << std::endl;
+	std::cout << secret << std::endl;
 }
+
+// int main(void)
+// {
+//     Contact hello;
+    
+// 	// std::cout << "hello" << std::endl;
+	
+// 	hello.create();
+// 	hello.create();
+//     return 0;
+// }
